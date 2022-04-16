@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<!--Responsive view-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Link to the favicon image -->
+	<link rel="icon" href="images/favicon.ico">
+	<!-- Link to the reset file -->
+	<link rel="stylesheet" href="css/html5reset.css">
+	<!-- Link to the stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<!--Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet'>
+	<!-- Font Awesome kit set up -->
+	<script src="https://kit.fontawesome.com/e877dce10b.js" crossorigin="anonymous"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CEGYBY528R"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'G-CEGYBY528R');
+	</script>
+	<title>Contact Amy</title>
+</head>
+
+<body>
+	<a class="skip" href="#main">Skip to Main Content</a>
+
+	<header>
+		<nav>
+			<ul>
+				<li><a href = "index.html">Home</a></li>
+				<li><a href = "contextualinquiry.html">Contextual Inquiry</a></li>
+				<li><a href = "cutgroup.html">CUTgroup</a></li>
+				<li><a href = "interactiondesign.html">Interaction Design</a></li>
+                <li><a class="active" href = "contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<!-- The h1 is a semantic tag that aids accessibility -->
+		<h1>Say hi!</h1>
+	</header>
+
+	<!-- Every page should have a main tag for accessibility -->
+	<main id="main">
+		<div class="flip-card" tabindex="0">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="images/amyheadshot.jpg" alt="Headshot picture of Amy">
+			  	</div>
+				<div class="flip-card-back">
+					<h3>Amy Engineer</h3>
+					<p>UX & UI Extraordinaire</p>
+					<p>Passionate about making tech more human</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="anotherspacer"></div>
+        <h2>If you would like to connect, please fill out the form below, and I will get back to you.</h2>
+
+		<div class="form">
+		<form action="https://formspree.io/f/mvolbpok" method="POST">
+			<fieldset>
+				<legend><h3>Form</h3></legend>
+				<div class="formspacing">
+					<label for="name_id">Your Name</label>
+					<i class="fa-solid fa-address-book"></i>
+					<input type="text" name = "user_name" id = "name_id" placeholder="Enter Your Name">
+				</div>
+
+				<div class="formspacing">
+					<label for="email_id">Your Email</label>
+					<i class="fa-solid fa-envelope"></i>
+					<input type="email" name = "user_email" id = "email_id" placeholder = "me@me.com">
+					<div><span>Format: me@me.com</span></div>
+				</div>
+
+				<div class="formspacing">
+					<label for="phone_id">Your Phone Number</label>
+					<i class="fa-solid fa-phone"></i>
+					<input type="tel" name = "user_phone" id = "phone_id" placeholder = "555-555-5555">
+					<div><span>Format: 123-456-7890</span></div>
+				</div>
+
+				<div class="formspacing">
+					<label for= "message_id">Leave A Message</label>
+					<i class="fa-solid fa-pen-clip"></i>
+					<input type="textarea" name = "message" id = "message_id" placeholder = "Type here"></textarea>
+				</div>
+
+				<div class="formspacing">
+					<input type="checkbox" name = "Subscribe" id = "subscribe">
+					<label for ="subscribe">Remember me</label>
+				</div>
+
+				<div class="formspacing">
+					<input type="submit" value ="Send Now!">
+				</div>
+			</fieldset>
+		</form>
+		</div>
+    </main>
+
+	<footer>
+		<hr>
+		<a href="https://www.linkedin.com/in/amy-engineer/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+		<p>&copy; Amy Engineer 2022</p>
+	</footer>
+
+</body>
+</html>
