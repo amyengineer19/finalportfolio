@@ -64,7 +64,7 @@ li a:hover {
 nav .active {
     background-color: #A62B1F;
     text-decoration: underline;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 /*Skip to main*/
@@ -99,6 +99,7 @@ p {font-family: "Roboto Slab";
    padding-top: 10px;
    padding-bottom: 10px;
    line-height: 1.5;}
+figcaption {font-style: italic;}
 
 /* Image Styling */
 img {
@@ -113,7 +114,11 @@ img:hover {
     border: 1px double #000000;
     box-shadow: 5px 10px #000000;
 }
-img.headshot, img.LCSL, img.cutgroup, img.cardsort, img.gojobgo, img.home {
+img.headshot, img.bessie, img.LCSL {
+    width: 30%;
+    height: 30%;
+}
+img.cutgroup, img.cardsort, img.gojobgo, img.home {
     width: 50%;
     height: 50%;
 }
@@ -121,7 +126,7 @@ img.cutgroup, img.cardsort {
     display: block;
     margin: auto;
 }
-figcaption {
+#caption {
     text-align: center;
 }
 
@@ -271,27 +276,7 @@ input[type=checkbox] {
 
 /*Styling for Desktop View*/
 @media screen and (min-width: 900px){
-    /* header {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    nav {
-        align-self: center;
-        flex-direction: row;
-    }
-    .nav_links {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    li {
-        flex-direction: row;
-    }
-    li a {
-    padding: 10px;
-    } */
-
+    /*Main Nav for desktop*/
     nav ul{
         display: flex;
         flex-direction: row;
@@ -310,7 +295,7 @@ input[type=checkbox] {
         text-decoration: none;
         padding-bottom: 0px;
         margin: 0px;
-        font-size: larger;
+        font-size: 1.5em;
     }
 
     /* Grid for Desktop view */
