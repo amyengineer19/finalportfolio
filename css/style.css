@@ -184,7 +184,7 @@ footer {
 
 
 /*Form on the contact page */
-input {
+input, textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -583,8 +583,8 @@ input[type=checkbox] {
 /* Style the front side (fallback if image is missing) */
 /*Original color: #038C4C*/
 .flip-card-front {
-    background-color: #038C4C;
-    color: #038C4C;
+    background-color: #026134;
+    color: #026134;
 }
 .flip-card-front > img {
     min-width: 200px;
