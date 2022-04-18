@@ -1,5 +1,4 @@
 /*Mobile First!*/
-
 body {
     font-family: "Roboto Slab", serif;
     line-height: 1.25;
@@ -13,44 +12,38 @@ header {
     flex-direction: column;
     justify-content: center;
 }
-
 .nav_links {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
 }
-
 nav ul{
-    background-color: #038C4C;
+    background-color: #026134;
     text-decoration: none;
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 10px;
     border-radius: 5px;
 }
-
 li {
     display: inline;
     text-align: center;
     margin-bottom: 0px;
 }
 
-/*Menu for Mobile- this is the default and thus does not require a media query.
-Mobile breakpoint ends at 579px*/
+/*Menu for Mobile- mobile is the default and thus does not require a media query.*/
 nav ul{
     display: flex;
     flex-direction: column;
     padding: 0px;
     margin: 0px;
 }
-
 li {
     display: flex;
     padding: 0px;
     text-align: center;
 }
-
 li a{
     text-decoration: none;
     padding-bottom: 0px;
@@ -64,12 +57,10 @@ li a{
     padding-bottom: 5px;
     margin: 20px;
 }
-
 li a:hover {
     background-color: #193C40;
     text-decoration: yellowgreen wavy underline;
 }
-
 nav .active {
     background-color: #A62B1F;
     text-decoration: underline;
@@ -81,19 +72,24 @@ a.skip{
     position: absolute;
     left: -500px;
 }
-
 a.skip:focus {
     position: absolute;
     left: 0px;
 }
 
+/*Text Styling*/
 h1, h2, h3, h4, h5, h6 {font-family: Raleway;}
 h1 {font-size: 4em;
     font-weight: bold;
-    padding-bottom: 10px;}
+    padding-bottom: 10px;
+    padding-top: 10px;}
 h2 {font-size: 3.5em;
-    font-weight: bold;}
-h3 {font-size: 3em;}
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 10px;}
+h3 {font-size: 3em;
+    padding-bottom: 10px;
+    padding-top: 10px;}
 h4 {font-size: 2.5em;}
 h5 {font-size: 2em;
     text-decoration: underline;}
@@ -104,27 +100,46 @@ p {font-family: "Roboto Slab";
    padding-bottom: 10px;
    line-height: 1.5;}
 
-img:hover {
-    padding: 10px;
-    box-shadow: 5px 10px #000000;
-}
-
+/* Image Styling */
 img {
-    width: 200px;
-    padding: 8px;
+    width: 85%;
+    height: 85%;
+    padding: 10px;
     margin: 10px;
     border: 1px double #000000;
 }
+img:hover {
+    padding: 10px;
+    border: 1px double #000000;
+    box-shadow: 5px 10px #000000;
+}
+img.headshot, img.LCSL, img.cutgroup, img.cardsort, img.gojobgo, img.home {
+    width: 50%;
+    height: 50%;
+}
+img.cutgroup, img.cardsort {
+    display: block;
+    margin: auto;
+}
+figcaption {
+    text-align: center;
+}
+
+footer {
+    display: inline-block;
+}
+/*End of common styling*/
+
 
 /* Grid for Mobile */
 .grid {
     display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-    justify-content: center;
+        grid-template-columns: 1fr;
+        width: 100%;
+        justify-content: center;
 }
 .rowgap:nth-child(2n) {
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 /*Flex*/
@@ -137,17 +152,33 @@ img {
         justify-content: center;
 }
 /*Flex specifically for mobile*/
-.flex > .qoc > img { /*Why won't this work*/
+.qoc {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex > .qoc > img {
     display: flex;
     justify-content: center;
+    width: 50%;
+    min-width: 35%
+    margin-left: 0px;
 }
 .appgallery { /*For interaction design app images*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+.heading2 {
+    margin-top: 150px;
+}
+.appgallery img {
+    width: 200px;
+    min-width: 150px;
+    height: auto;
+}
 
-/*form on the contact page */
+
+/*Form on the contact page */
 input {
     width: 100%;
     padding: 12px 20px;
@@ -157,7 +188,7 @@ input {
     box-sizing: border-box;
 }
 input[type=submit] {
-    background-color: #45a049;
+    background-color: #026134;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -166,17 +197,15 @@ input[type=submit] {
     width: 100%;
 }
 input[type=submit]:hover {
-    background-color: #307034;
     border: 1px solid #000;
+    font-weight: bold;
 }
 .formspacing {
     margin-bottom: 30px;
 }
-/* .subscribe {
-    position: absolute;
-} */
-
+/*remember me radio button on the contact page*/
 input[type=checkbox] {
+    width: 30px;
     padding: 12px 20px;
     margin: 0px;
     display: inline-block;
@@ -185,14 +214,8 @@ input[type=checkbox] {
 }
 
 
-footer {
-    display: inline-block;
-}
-/*End of common styling*/
-
-
 /*Tablet Styling*/
-@media screen and (min-width: 580px) and (max-width: 900px) {
+@media screen and (min-width: 580px) {
     nav ul{
         display: flex;
         flex-direction: row;
@@ -213,25 +236,17 @@ footer {
         margin: 0px;
     }
 
+    /*Grid for Tablet*/
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        row-gap: 40px;
-        column-gap: 30px;
-        width: 95%;
-        margin-right: 20px;
+        row-gap: 45px;
+        column-gap: 20px;
+        margin-right: 15px;
     }
     .grid > .rowgap > img{
-        width: 100%;
+        min-width: 90%;
     }
-
-    /* #contextual {
-        grid-column: 2 / 2;
-    }
-
-    .grid > .rowgap > #affinity {
-        grid-column: 1 / 2;
-    } */
 
     /*Additional Flex for Tablet View*/
     .qoc {
@@ -240,20 +255,23 @@ footer {
         flex-wrap: nowrap;
         align-self: center;
     }
+    .heading2 {
+        margin-top: 0px;
+    }
 
     /*Structural Change- remove rotating emoji*/
-    #emoji {
+    .emoji {
     display: none
     }
-    #spacer {
+    .spacer {
         display: none;
     }
 }
 
 
 /*Styling for Desktop View*/
-@media screen and (min-width: 901px){
-    header {
+@media screen and (min-width: 900px){
+    /* header {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -272,58 +290,238 @@ footer {
     }
     li a {
     padding: 10px;
+    } */
+
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        padding: 15px;
+        margin: 0px;
+    }
+
+    li {
+        display: flex;
+        padding-left: 45px;
+        text-align: center;
+        align-items: space-between;
+    }
+
+    li a{
+        text-decoration: none;
+        padding-bottom: 0px;
+        margin: 0px;
+        font-size: larger;
     }
 
     /* Grid for Desktop view */
     .grid {
         display: grid;
-        grid-template-columns: .65fr 1.25fr .65fr 1.25fr;
-        row-gap: 50px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 20px;
+        row-gap: 40;
         margin-right: 17px;
     }
+
     .grid > .rowgap > img{
-        width: 90%;
+        min-width: 90%;
+    }
+    .grid > #firstparagraph {
+        grid-column: 1 /span 4;
+        grid-row: 1 / span 1;
+    }
+    .grid > #firstpicture {
+        grid-column: 1 /span 4;
+        grid-row: 2 / span 1;
+    }
+    .grid > #secondparagraph {
+        grid-column: 1 / span 1;
+        grid-row: 3 /span 1;
+    }
+    .grid > #secondpicture {
+        grid-column: 2 / span 3;
+        grid-row: 3 /span 1;
+    }
+    .grid > #thirdparagraph {
+        grid-column: 1 / span 2;
+        grid-row: 4 /span 1;
+    }
+    .grid > #thirdpicture {
+        grid-column: 3 /span 2;
+        grid-row: 4 / span 1;
+    }
+    .grid > #fourthparagraph {
+        grid-column: 1 /span 4;
+        grid-row: 5 /span 1;
+    }
+    .grid > #fourthpicture {
+        grid-column: 1 /span 4;
+        grid-row: 6 / span 1;
+    }
+    .grid > #fifthparagraph {
+        grid-column: 1 / span 2;
+        grid-row: 7 /span 1;
+    }
+    .grid > #fifthpicture {
+        grid-column: 3 /span 2;
+        grid-row: 7 / span 1;
+    }
+    .grid > #sixthparagraph {
+        grid-column: 1 / span 1;
+        grid-row: 8 /span 1;
+    }
+    .grid > #sixthpicture {
+        grid-column: 2 /span 3;
+        grid-row: 8 / span 1;
+    }
+    .grid > #seventhparagraph {
+        grid-column: 1 / span 1;
+        grid-row: 9 /span 1;
+    }
+    .grid > #seventhpicture {
+        grid-column: 2 /span 3;
+        grid-row: 9 / span 1;
+    }
+    .grid > #eigthparagraph {
+        grid-column: 1 / span 1;
+        grid-row: 10 /span 1;
+    }
+    .grid > #eightpicture {
+        grid-column: 2 /span 3;
+        grid-row: 10 / span 1;
+    }
+    .grid > #ninthparagraph {
+        grid-column: 1 / span 1;
+        grid-row: 11 /span 1;
+    }
+    .grid > #ninthpicture {
+        grid-column: 2 /span 3;
+        grid-row: 11 / span 1;
     }
 
+
     /*Additonal Flex for Desktop view */
-    /* .flex {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    } */
     .qoc {
         display: flex;
         justify-content: center;
         flex-wrap: nowrap;
         align-self: center;
     }
-    /* img {
-        flex-basis: auto;
-        flex-shrink: 1;
-    } */
-    /* .appgallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    } */
+    .heading2 {margin-top: 0px;}
     .appgallery img {
         margin: 10px;
     }
 
+
     /*Structural Change- hide (not remove) rotating emoji*/
-    #emoji {
+    .emoji {
         visibility: hidden;
         }
-    #spacer {
+    .spacer {
         visibility: hidden;
     }
-} /*End Desktop Styling*/
+}
+/*End Desktop Styling*/
 
 
-/*ANIMATIONS AND REDUCED MOTION SECTION*/
+/*Start index.html tooltip styling.  This is my special thing.*/
+#headshotspacer{
+    height: 50px;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.tooltip .tooltipindex {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+.tooltip .tooltipindex::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+.tooltip:hover .tooltipindex {
+    visibility: visible;
+}
+.tooltip:focus .tooltipindex {
+    visibility: visible;
+}
+/*End Tooltip index.html styling*/
+
+/*Start contact.html tooltip styling.  This is my special thing.*/
+#anotherspacer{
+    height: 50px;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.tooltip .tooltipcontact {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+.tooltip .tooltipcontact::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+.tooltip:hover .tooltipcontact {
+    visibility: visible;
+}
+.tooltip:focus .tooltipcontact {
+    visibility: visible;
+}
+/*End tooltip contact.html styling*/
+
+
+/*Parallax scrolling picture*/
+.parallax {
+    background: url("../images/northquad.jpg");
+    background-color: #707070;
+    min-height: 400px;
+    margin: auto;
+/* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 /*Animation of the first img on the index.html page */
-#headshot {
+.headshot {
     animation-name: logo_animate;
     animation-duration: 3s;
 }
@@ -335,9 +533,8 @@ footer {
         transform: scale(1);
     }
 }
-
 /*Animation of the emoji on index.html*/
-#emoji {
+.emoji {
     position: absolute;
     animation-name: emoji_animate;
     animation-duration: 5000ms;
@@ -352,9 +549,10 @@ footer {
         transform:rotate(360deg);
     }
 }
-#spacer { /*This ensures the emoji animation has enough room*/
+.spacer { /*This ensures the emoji animation has enough room*/
     height: 90px;
 }
+
 
 /*Flipcard on contact page*/
 #anotherspacer { /*This ensures the flipcard has enough room*/
@@ -377,6 +575,10 @@ footer {
     transform-style: preserve-3d;
     box-shadow: 0 5px 10px #000;
 }
+.contactimage {
+    width: 100%;
+    height: 100%;
+}
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
@@ -394,13 +596,14 @@ footer {
     backface-visibility: hidden;
 }
 /* Style the front side (fallback if image is missing) */
+/*Original color: #038C4C*/
 .flip-card-front {
     background-color: #038C4C;
     color: #038C4C;
 }
 .flip-card-front > img {
-    width: 300px;
-    height: 300px;
+    min-width: 200px;
+    min-height: 200px;
     padding: 0px;
     box-shadow: none;
     padding: 0px;
@@ -409,32 +612,31 @@ footer {
 }
 /* Style the back side */
 .flip-card-back {
-    background-color: #038C4C;
+    background-color: #026134;
     color: white;
     transform: rotateY(180deg);
 }
 
 
-/*Reduced Motion*/
+/*REDUCED MOTION SECTION*/
 @media screen and (prefers-reduced-motion: reduce){
-
-    /* Turn off headshot animation */
-    #headshot {
-        animation-name: none;
+    /*Turn off image hover*/
+    img:hover {
+        box-shadow: none;
     }
 
-    #emoji {
+    /* Turn off headshot animation*/
+    .headshot {
+        animation-name: none;
+    }
+    /*Turn off emoji animation*/
+    .emoji {
         animation-name: none;
     }
 
     /*Turn off scroll*/
     html {
-        scroll-behavior: auto; /* Removes scroll animation */
-    }
-
-    /*Turn off parallax*/
-    .intro{
-        background-attachment: initial;
+        scroll-behavior: auto; /*Removes scroll animation*/
     }
 
     /*Turns off flipcard*/
@@ -444,5 +646,26 @@ footer {
     /*Turns off flipcard*/
     .flip-card:focus .flip-card-inner {
         transform: none;
+    }
+
+    /*Turns off the tooltip for index*/
+    .tooltip:hover .tooltipindex {
+        visibility: hidden;
+    }
+    .tooltip:focus .tooltipindex {
+        visibility: hidden;
+    }
+
+    /*Turns off the tooltip for contact*/
+    .tooltip:hover .tooltipcontact {
+        visibility: hidden;
+    }
+    .tooltip:focus .tooltipcontact {
+        visibility: hidden;
+    }
+
+    /*Turn off parallax on cutgroup page*/
+    .parallax{
+        background-attachment: initial;
     }
 }

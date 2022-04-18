@@ -43,16 +43,21 @@
 			</ul>
 		</nav>
 		<!-- The h1 is a semantic tag that aids accessibility -->
-		<h1>Amy Engineer's Portfolio</h1>
 	</header>
 
 	<!-- Every page should have a main tag for accessibility -->
 	<main id="main">
-		<h1 id="emoji">&#128075;</h1>
-		<div id="spacer"></div>
-        <h2>Hi! Welcome to my portfolio, where I will be documenting my UX/HCI career.</h2>
+		<h1>Amy Portfolio</h1>
+		<h1 class="emoji">&#128075;</h1>
+		<div class="spacer"></div>
 
-        <img id='headshot' src="images/amyheadshot.jpg" alt="Headshot picture of Amy" width="200">
+
+		<div class="tooltip" tabindex="0"><h2>Hi! Welcome to my portfolio.</h2>
+			<span class="tooltipindex">This is where I will be documenting my UX/HCI career.</span>
+		</div>
+
+		<div id='headshotspacer'></div>
+        <img class='headshot' src="images/amyheadshot.jpg" alt="Headshot picture of Amy">
 
 		<p>I am currently a student at the <a href="https://www.si.umich.edu/">University of Michigan School of Information</a>,
 			pursing a Master's degree in User Experience and Human Computer Interaction.
@@ -66,7 +71,7 @@
             impact.
         </p>
 
-        <img src="images/lcsl_pic.jpg" alt="Another headshot picture of Amy at her old job" width="200">
+        <img class="LCSL" src="images/lcsl_pic.jpg" alt="Another headshot picture of Amy at her old job">
 
 		<p>My hobbies include baking (I make a mean blueberry muffin!), traveling, taking care of my house plants, and
             hanging out with my roommate's cat. I am passionate about civic engagement and try to volunteer in my
